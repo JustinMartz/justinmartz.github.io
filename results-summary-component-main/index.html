@@ -1,155 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" media='screen and (max-width: 1439px)' href="style.css">
+    <link rel="stylesheet" type="text/css" media='screen and (min-width: 1440px)' href="desktop-style.css">
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
   
-  <title>Frontend Mentor | Results summary component</title>
-    <h1>Changing this to see if it works</h1>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+  <body>
 
-    .summary-card {
-      height: 600px;
-      width: 400px;
-      background-color: aquamarine;
-    }
+    <div class="result-card">
+      <div class="result-components-container">
+        <h3>Your Result</h3>
+        <div class="circle">
+          <div class="number"><h1>76</h1></div>
+          <div class="text"><p>of 100</p></div>
+        </div>
+        <h2>Great</h2>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+    </div>
 
-    ul {
-      background-color: wheat;
-      list-style: none;
-    }
+    <div class="summary-container">
+    <div id="summaries" class="summary-card">
+      <h3>Summary</h3>
+ 
+    </div>
+    <div class="butt-style"><p>Continue</p></div>
 
-    li {
-      background-color: goldenrod;
-      display: inline-flex;
-    }
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://justinmartz.github.io">Justin Martz</a>.
+    </div>
+    </div>
 
-    h2 {
-      color: red;
-      padding-right: 5rem;
-    }
+  </body>
 
-    span {
-      color: whitesmoke;
-    }
-  </style>
-</head>
-<body>
+  <script>
+    const summariesContainer = document.getElementById('summaries');
+    const list = document.createDocumentFragment();
 
-  Your Result
-  76
-  of 100
+    fetch("data.json")
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        let summaries = data;
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+        for(var i = 0; i < 4; i++) {
+          let div = document.createElement("div");
+          let category = document.createElement('p');
+          let score = document.createElement('span');
+          let icon = document.createElement('img');
+          let hundred = document.createElement('p');
 
-  Reaction
-  80 / 100
+          category.innerHTML = `${summaries[i].category}`;
+          score.innerHTML = `${summaries[i].score}`;
+          hundred.innerHTML = "&nbsp;/ 100";
+          icon.src = `${summaries[i].icon}`;
 
-  Memory
-  92 / 100
+          div.appendChild(icon);
+          div.appendChild(category);
+          div.appendChild(score);
+          div.appendChild(hundred);
+          list.appendChild(div);
 
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-
-  <div class="result-card"></div>
-  <div class="summary-card">
-    <ul id="summaries">
-    </ul>
-    
-  </div>
-  
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-
-
-</body>
-<script>
-  const ul = document.getElementById('summaries');
-  const list = document.createDocumentFragment();
-
-  fetch("data.json")
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      let summaries = data;
-
-      let li = document.createElement('li');
-      let category = document.createElement('p');
-      let score = document.createElement('p');
-      let icon = document.createElement('img');
-      let hundred = document.createElement('p');
-
-      category.innerHTML = `${summaries[0].category}`;
-      score.innerHTML = `${summaries[0].score}`;
-      hundred.innerHTML = " / 100";
-      icon.src = `${summaries[0].icon}`;
-
-      li.appendChild(icon);
-      li.appendChild(category);
-      li.appendChild(score);
-      li.appendChild(hundred);
-      list.appendChild(li);
-      //ul.innerText = JSON.stringify(data[0].category);
-
-      //document.body.appendChild(list);
-      ul.appendChild(list);
-
-
-        
-        
-      
-    })
-
-
-
-  /*
-  
-  
-  fetch("data.json")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      let summaries = data;
-
-      summaries.map(function(summary) {
-        let li = document.createElement('li');
-        let category = document.createElement('h2');
-        let score = document.createElement('span');
-        let icon = document.createElement('img');
-
-        category.innerHTML = `${summary.category}`;
-        score.innerHTML = `${summary.score}`;
-        icon.innerHTML = `${summary.icon}`;
-
-        li.appendChild(category);
-        li.appendChild(score);
-        li.appendChild(icon);
-        list.appendChild(li);
-      });
-    })
-    .catch(function(error) {
-    console.log(error);
-    });
-
-    ul.appendChild(list);
-    */
-
-</script>
+          summariesContainer.appendChild(list);
+        }
+      })
+  </script>
 </html>
