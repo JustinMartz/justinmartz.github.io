@@ -2,4 +2,4 @@
 
 Landing spot for frontendmentor.io solutions
 
-TODO: Proper index as solutions get completed
+TODO: Sort and filter option for table as more entries get added
