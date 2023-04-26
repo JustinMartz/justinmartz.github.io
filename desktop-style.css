@@ -56,7 +56,10 @@ tfoot td {
   
 thead,
 tfoot {
-  background: url(blue-texture.jpg);
+  background: linear-gradient(
+      rgba(138,43,226, .25), 
+      rgba(138,43,226, .25));
+  /* background: url(blue-texture.jpg); */
   background-size: cover;
   color: #fef5ee;
   text-shadow: 1px 1px 1px black;
