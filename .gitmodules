@@ -1,3 +1,6 @@
 [submodule "product-preview-card-component-main"]
 	path = product-preview-card-component-main
 	url = https://github.com/JustinMartz/product-preview-card-component-main
+[submodule "results-summary-component-main"]
+	path = results-summary-component-main
+	url = https://github.com/JustinMartz/results-summary-component-main
