@@ -4,3 +4,6 @@
 [submodule "results-summary-component-main"]
 	path = results-summary-component-main
 	url = https://github.com/JustinMartz/results-summary-component-main
+[submodule "interactive-rating-component-main"]
+	path = interactive-rating-component-main
+	url = https://github.com/JustinMartz/interactive-rating-component-main
