@@ -6,6 +6,9 @@
 
 html {
     background-image: url("background.jpg");
+    /* Implement after header and navbar are fixed position
+    background-attachment: fixed;
+    */
     font-size: 16px;
     color: #0a0702;
 }
@@ -16,6 +19,9 @@ body {
     margin: 5vw;
 }
 
+a:visited {
+  color: #ae9d67;
+}
 h1 {
     color: #ae9d67;
     font-size: 5rem;
@@ -28,9 +34,6 @@ h2 {
     font-family: 'Bebas Neue', cursive;
 }
 
-section {
-}
-
 table {
     table-layout: fixed;
     width: 100%;
@@ -38,15 +41,6 @@ table {
     border: 3px solid #ae9d67;
 }
 
-table a:visited {
-    color: #fef5ee; 
-    text-decoration: none;
-  }
-
-table a:link {
-    color: #5d3a1c;
-    text-decoration: none;
-}
 thead th,
 tfoot th,
 tfoot td {
@@ -57,23 +51,27 @@ tfoot td {
 thead,
 tfoot {
   background: linear-gradient(
-      rgba(138,43,226, .25), 
-      rgba(138,43,226, .25));
+      rgba(232,198,194, .25), 
+      rgba(232,198,194, .25));
   /* background: url(blue-texture.jpg); */
   background-size: cover;
   color: #fef5ee;
   text-shadow: 1px 1px 1px black;
 }
   thead th:nth-child(1) {
-    width: 20%;
+    width: 35%;
   }
   
   thead th:nth-child(2) {
-    width: 40%;
+    width: 15%;
   }
   
   thead th:nth-child(3) {
-    width: 40%;
+    width: 20%;
+  }
+
+  thead th:nth-child(4) {
+    width: 30%;
   }
   
   th,
@@ -82,11 +80,86 @@ tfoot {
     text-align: left;
   }
 
+tbody th {
+  font-family: 'Barlow', sans-serif;
+  color: #fef5ee;
+  text-transform: uppercase;
+}
   tbody tr:nth-child(odd) {
-    background-color: #6f532e;
+    background-color: rgba(169,169,169, .5); 
   }
   
   tbody tr:nth-child(even) {
-    background-color: #ae9d67;
+    background-color: rgba(128,128,128, .5);
 
   }
+
+
+  tbody tr {
+    font-size: 1.2rem;
+  }
+
+.difficulty-wrapper {
+  border: 1px solid #0a0702; 
+  border-radius: 0.5rem;
+  display: inline-flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.number-wrapper {
+  background-color: #ae9d67;
+  color: rgb(255, 255, 255);
+  font-family: "Barlow", sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  margin: 0px;
+  padding: .8rem;
+}
+
+.text-wrapper {
+  background-color: #fef5ee;
+  color: #ae9d67;
+  font-family: "Barlow", sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  margin: 0px;
+  text-transform: uppercase;
+  padding: .8rem;
+}
+
+.reverse-text-wrapper {
+  background-color: #ae9d67;
+  color: #fef5ee;
+  font-family: "Barlow", sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  margin: 0px;
+  text-transform: uppercase;
+  padding: .8rem;
+}
+
+table svg {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 2rem;
+}
+
+.icon-wrapper {
+    background-color: #ae9d67;
+    padding: .4rem .4rem 0 .5rem;
+}
+
+.reverse-icon-wrapper {
+  background-color: #fef5ee;
+  padding: .4rem .4rem 0 .5rem;
+}
+
+table img {
+  border-radius: 50%;
+}
+
+span > svg {
+  margin: 0;
+}
+
