@@ -7,3 +7,6 @@
 [submodule "interactive-rating-component-main"]
 	path = interactive-rating-component-main
 	url = https://github.com/JustinMartz/interactive-rating-component-main
+[submodule "nft-preview-card-component-main"]
+	path = nft-preview-card-component-main
+	url = https://github.com/JustinMartz/nft-preview-card-component-main
