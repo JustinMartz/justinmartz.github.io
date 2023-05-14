@@ -1,0 +1,50 @@
+{
+    "challenges":[
+        {
+            "challenge":"Results Summary Component",
+            "challengeurl":"https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV",
+            "difficulty":"1",
+            "livesiteurl":"https://justinmartz.github.io/results-summary-component-main",
+            "githuburl":"https://github.com/JustinMartz/results-summary-component-main",
+            "solutionurl":"https://www.frontendmentor.io/solutions/solution-to-results-summary-component-challenge-dsfIVoMLHE",
+            "completed":true 
+        },
+        {
+            "challenge":"Product Preview Card Component",
+            "challengeurl":"https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa",
+            "difficulty":"1",
+            "livesiteurl":"https://justinmartz.github.io/preview-card-component-main",
+            "githuburl":"https://github.com/JustinMartz/preview-card-component-main",
+            "solutionurl":"https://www.frontendmentor.io/solutions/solution-3-for-product-preview-card-component-blc_QYP4xA",
+            "completed":true 
+        },
+        {
+            "challenge":"Interactive rating component",
+            "challengeurl":"https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI",
+            "difficulty":"1",
+            "livesiteurl":"https://justinmartz.github.io/interactive-rating-component-main",
+            "githuburl":"https://github.com/JustinMartz/interactive-rating-component-main",
+            "solutionurl":"https://www.frontendmentor.io/solutions/solution-for-interactive-rating-component-C9Y2bFHhOp",
+            "completed":true
+        },
+        {
+            "challenge":"NFT preview card component",
+            "challengeurl":"https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U",
+            "difficulty":"1",
+            "livesiteurl":"https://justinmartz.github.io/nft-preview-card-component-main",
+            "githuburl":"https://github.com/JustinMartz/nft-preview-card-component-main",
+            "solutionurl":"https://www.frontendmentor.io/solutions/solution-for-nft-preview-card-component-Zb8IhcLtD4",
+            "completed":true
+        },
+        {
+            "challenge":"Order summary component",
+            "challengeurl":"https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj",
+            "difficulty":"1",
+            "livesiteurl":"",
+            "githuburl":"",
+            "solutionurl":"",
+            "completed":false
+        }
+
+    ]
+}
